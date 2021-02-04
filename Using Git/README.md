@@ -34,8 +34,20 @@ This exercise must be done individually or in pairs. Remember to return the docu
 #### 3. Explain the following Git and version control related concepts:
   
   - A working directory
+
+  You should think of the working directory (also commonly referred to as the “working tree”) as a sandbox, where you can try changes out before committing them to your staging area (index) and then to history. The other two trees (they being **The HEAD** and **The Index**) store their content in an efficient but inconvenient manner, inside the .git folder. The working directory unpacks them into actual files, which makes it much easier for you to edit them. [[2]](https://git-scm.com/book/en/v2/Git-Tools-Reset-Demystified#_the_working_directory)
+ 
+
   - A staging area
+
+  Staging Area or "the index" is what Git looks at when you run `git commit`. So you code what ever you are coding at the sandbox and then stage your saved changes (or add new files) to your proposed next commit.
+
   - A local repository
+
+  If you have a project directory that is currently not under version control and you want to start controlling it with Git you need to navigate to that project’s directory and run `git init`.
+  After the initialization a local repository is created. `git init` creates a new subdirectory named .git that contains all of your necessary repository files — a Git repository skeleton. [[3]](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#_initializing_a_repository_in_an_existing_directory)
+
+
   - A remote repository
   - A commit
   - A branch
