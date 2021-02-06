@@ -49,12 +49,30 @@ This exercise must be done individually or in pairs. Remember to return the docu
 
 
   - A remote repository
+
+  If you wish to use Git to its Fullest Potential and want to collaborate on any Git project, you need to know how to manage your remote repositories. Remote repositories are versions of your project that are hosted on the Internet or network somewhere. Managing remote repositories includes knowing how to add remote repositories, remove remotes that are no longer valid, manage various remote branches and define them as being tracked or not, and more. In this section, we’ll cover some of these remote-management skills. [[4]](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes#_remote_repos)
+
   - A commit
+
+  Git commit command is the main function for saving changes to local repository safely. Commit takes a snapshot of the project and treats it as a version. [[5]](https://www.bitdegree.org/learn/git-commit-command)
+
   - A branch
+
+  Branching in Git is a function that is used to create an independent, similar copy of the current repository for different usage requirements. For me branching and what is a branch is best to understand by thinking Git Feature Branch Workflow.
+
+  > The core idea behind the Feature Branch Workflow is that all feature development should take place in a dedicated branch instead of the master branch. This encapsulation makes it easy for multiple developers to work on a particular feature without disturbing the main codebase. It also means the master branch will never contain broken code, which is a huge advantage for continuous integration environments. [[6]](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)
+
+  So you make a copy (new `branch`) of the current version (`master`) of the product and start developing a new feature there. When you're finished you create a MR that eventually ends up being merged to the "new" master. Different developers can code different features same time and Git makes sure that it's easy for individual developer to compare the developed work to "released" product (in this case the master branch is released product). This comparison makes it much easies and saver to add new code to up to date codebase without fear of breaking up anything big. And even if you do, there's always version control so you can always roll back to previous  versions.
 
 #### 4. Initialize one of your programming projects in your local computer as git project. Display it status. Take a screenshot of the status message.
 
 #### 5. Write a short example of a .gitignore file. What is the purpose of that file? When you should add it?
+
+You use .gitignore to for example hide project dependencies. 
+
+A dependency, in software development, is a separate program or piece of code that is required for the operation of the software you are trying to run. You don't write (copy+paste) or maintain that code yourself, but rather install and/or update it via package management system and afterwards rely on that codebase when writing something based on that code. 
+
+So you need the dependency for your code to work (hence you depend it) but because it comes as a separate package there's no point adding it to your codebase. The downside adding these dependencies to your project would be that they are rather big and can swallow up your project rather quickly. And it would be a copy+paste that particular version of the dependency. What happens when dependency gets updated. It makes much more sense to exclude these's depency files from the version control and rather point to them via separate instruction. In node projects this file is called package.json file.
 
 #### 6. Work locally with working area and staging area and make a few commits. Pay special attention on good commits’ comments. Take screenshots documenting your working process. Take also a screenshot of your git log.
 
